@@ -1,5 +1,6 @@
 :root {
     --navOptionColor: #e4e4e4;
+    --main-color: #efefef;
 }
 
 * {
@@ -16,6 +17,8 @@ html {
     height: 100%;
 }
 
+/* HEADER AND NAVBAR */
+
 a {
     text-decoration: none;
     color: unset;
@@ -24,11 +27,11 @@ a {
 header {
     font-family: 'Sintony', sans-serif;
     border-bottom: 1px solid black;
-    background-color: #fafafa;
+    background-color: var(--main-color);
 }
 
 .header-container {
-    max-width: 80%;
+    max-width: 75%;
     margin: auto;
     height: 80px;
     display: flex;
@@ -37,29 +40,39 @@ header {
 }
 
 .left-header-div {
-    margin-left: 50px;
+    /* margin-left: 50px; */
     font-size: 18px;
     display: flex;
     align-items: center;
     text-align: center;
+    padding: 0 15px;
 }
 
 .right-header-div {
-    margin-right: 50px;
+    /* margin-right: 50px; */
     display: flex;
+    font-size: 16px;
     flex-direction: row;
-    gap: 0;
+    align-items: center;
+    gap: 10px;
 }
 
 .right-header-div a {
-    padding: 0 30px;
+    padding: 15px 20px;
     display: flex;
     align-items: center;
+    border-radius: 100px;
+    border: 1px solid inherit;
 }
 
 .right-header-div a:hover {
-    animation: nav-bar-option-animation 0.3s ease-in 0s;
+    animation: nav-bar-option-animation 0.1s ease-in 0s;
     animation-fill-mode: forwards;
+}
+
+.left-header-div:hover {
+    animation: nav-bar-option-animation 0.1s ease-in 0s;
+    animation-fill-mode: both;
 }
 
 @keyframes nav-bar-option-animation {
@@ -72,18 +85,67 @@ header {
     }
 }
 
+/* MAIN INFORMATION CONTAINER */
+
 .main-information-container {
-    background-color: #fafafa;
+    background-color: var(--main-color);
     width: 75%;
-    margin:5px auto;
+    margin: 10px auto;
     display: flex;
     border-radius: 10px;
+    font-family: 'Sintony', sans-serif;
 }
 
 .description-container {
-    flex-grow: 4;
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.my-name {
+    padding: 20px;
+    font-size: 70px;
+    text-align: center;
+}
+
+.information-paragraph {
+    color: #3b3b3b;
+    font-size: 1em;
+    margin: 0 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.social-meida-icons {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 40px;
+    gap: 10px;
+}
+
+.social-meida-icons i {
+    font-size: 50px;
 }
 
 .profile-photo-container {
-    flex-grow: 3;
+    flex-shrink: 2;
+    flex-grow: 2;
+}
+
+.profile-photo-container picture {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo-container picture img {
+    max-height:20em;
+    border-radius: 100%;
+    margin: 0 70px;
+    padding: 10px;
+    border: 1px dashed black;
 }
