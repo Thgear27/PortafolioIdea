@@ -41,7 +41,7 @@ header {
 
 .left-header-div {
     /* margin-left: 50px; */
-    font-size: 18px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -51,7 +51,7 @@ header {
 .right-header-div {
     /* margin-right: 50px; */
     display: flex;
-    font-size: 16px;
+    font-size: 14px;
     flex-direction: row;
     align-items: center;
     gap: 10px;
@@ -59,8 +59,6 @@ header {
 
 .right-header-div a {
     padding: 15px 20px;
-    display: flex;
-    align-items: center;
     border-radius: 100px;
     border: 1px solid inherit;
     transition: background-color 0.2s ease;
@@ -90,13 +88,13 @@ header {
 
 .my-name {
     padding: 20px;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
 }
 
 .information-paragraph {
     color: #3b3b3b;
-    font-size: 1em;
+    font-size: 14px;
     margin: 0 40px;
     padding-bottom: 10px;
     text-align: center;
@@ -117,6 +115,7 @@ header {
 .profile-photo-container {
     flex-shrink: 2;
     flex-grow: 2;
+    margin: 0 40px;
 }
 
 .profile-photo-container picture {
@@ -124,16 +123,18 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-content: center;
     align-items: center;
 }
 
 .profile-photo-container picture img {
-    max-height: 20em;
+    /* max-height: 250px; */
+    max-width: 250px;
     border-radius: 100%;
-    margin: 0 70px;
     padding: 10px;
     border: 1px dashed black;
     position: relative;
+    margin: auto;
     bottom: 0;
     transition: all 0.2s ease;
 }
@@ -141,4 +142,36 @@ header {
 .profile-photo-container picture img:hover {
     box-shadow: 0px 0px 8px 4px rgba(69, 69, 69, 0.2);
     bottom: 2px;
+}
+
+@media (max-width: 1110px) {
+    .header-container {
+        flex-direction: column;
+        padding: 20px 0 10px 0;
+    }    
+    
+    .left-header-div, .right-header-div {
+        justify-content: center;
+    }
+
+    .right-header-div {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .right-header-div a {
+        min-width:65px;
+        text-align: center;
+    }
+
+    .main-information-container {
+        padding: 20px 0;
+        flex-direction: column-reverse;
+        width: 100%;
+        margin: 0;
+    }
+     
+    .my-name {
+        font-size: 30px;
+    }
 }
