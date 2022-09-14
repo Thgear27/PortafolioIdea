@@ -1,6 +1,7 @@
 :root {
     --navOptionColor: #e4e4e4;
     --main-color: #efefef;
+    --second-color: #c6c6c6;
 }
 
 * {
@@ -9,7 +10,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23e4e4e4' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%23c6c6c6' fill-opacity='0.4'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
 }
 
 body,
@@ -27,7 +28,7 @@ a {
 header {
     font-family: 'Sintony', sans-serif;
     border-bottom: 1px solid black;
-    background-color: var(--main-color);
+    background-color: var(--second-color);
 }
 
 .header-container {
@@ -100,7 +101,7 @@ header {
     text-align: center;
 }
 
-.social-meida-icons {
+.social-media-icons {
     padding: 20px 10px;
     display: flex;
     justify-content: center;
@@ -108,8 +109,33 @@ header {
     gap: 10px;
 }
 
-.social-meida-icons i {
+.social-media-icons i {
+    position: relative;
+    top: 0;
     font-size: 50px;
+    transition: all 0.05s linear 0s;
+}
+
+.social-media-icons i:hover {
+    top: 3px;
+}
+
+.text-line-between {
+    display: flex;
+    justify-content: center;
+    color: gray;
+    writing-mode: vertical-rl;
+    padding: 10px 0;
+}
+
+.text-line-between p {
+    padding: 20px 0;
+}
+
+.line {
+    min-height: 20px;
+    border-left: 1px solid gray;
+    align-self: center;
 }
 
 .profile-photo-container {
@@ -148,10 +174,29 @@ header {
     .header-container {
         flex-direction: column;
         padding: 20px 0 10px 0;
-    }    
-    
-    .left-header-div, .right-header-div {
+    }
+
+    .left-header-div,
+    .right-header-div {
         justify-content: center;
+    }
+
+    .text-line-between {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: gray;
+        writing-mode: horizontal-tb;
+        padding: 10px 0;
+    }
+
+    .text-line-between p {
+        padding: 0;
+        text-align: center;
+    }
+
+    .line {
+        display: none;
     }
 
     .right-header-div {
@@ -160,7 +205,7 @@ header {
     }
 
     .right-header-div a {
-        min-width:65px;
+        min-width: 65px;
         text-align: center;
     }
 
@@ -170,8 +215,9 @@ header {
         width: 100%;
         margin: 0;
     }
-     
+
     .my-name {
         font-size: 30px;
+        padding-top: 0;
     }
 }
