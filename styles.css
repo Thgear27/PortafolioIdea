@@ -340,4 +340,9 @@ header {
     .project-container {
         flex-direction: column;
     }
+
+    .project-img-container {
+        margin-right: 0;
+        height: 230px;
+    }
 }
