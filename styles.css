@@ -64,7 +64,7 @@ header {
     padding: 15px 20px;
     border-radius: 100px;
     border: 1px solid inherit;
-    position: relative; 
+    position: relative;
     bottom: 0;
     transition: all 0.2s ease;
 }
@@ -316,7 +316,8 @@ header {
     }
 
     .right-header-div a {
-        min-width: 65px;
+        min-width: 100px;
+        padding: 15px 5px;
         text-align: center;
     }
 
@@ -330,5 +331,13 @@ header {
     .my-name {
         font-size: 30px;
         padding-top: 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-container {
+        flex-direction: column;
     }
 }
